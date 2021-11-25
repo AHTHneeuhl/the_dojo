@@ -10,6 +10,7 @@ import Login from "./pages/login/Login";
 import Signup from "./pages/signup/Signup";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Users from "./components/Users";
 
 function App() {
   const { user, authIsReady } = useAuthContext();
@@ -49,6 +50,7 @@ function App() {
               />
             </Routes>
           </div>
+          {user && <Users />}
         </BrowserRouter>
       )}
     </div>
