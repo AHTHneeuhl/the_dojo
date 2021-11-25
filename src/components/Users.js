@@ -12,6 +12,7 @@ const Users = () => {
       {documents &&
         documents.map((user) => (
           <div key={user.id} className='user-list__item'>
+            {user.online && <span className='online-user' />}
             <span>{user.displayName}</span>
             <Avatar user={user} />
           </div>
