@@ -15,7 +15,7 @@ const Sidebar = () => {
         <nav className='links'>
           <ul>
             <li>
-              <NavLink exact to='/'>
+              <NavLink exact='true' to='/'>
                 <img src={DashbaoardIcon} alt='dashboard icon' />
                 <span>Dashboard</span>
               </NavLink>

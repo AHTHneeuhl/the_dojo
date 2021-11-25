@@ -18,7 +18,7 @@ function App() {
         <div className='container'>
           <Navbar />
           <Routes>
-            <Route path='/' element={<Dashboard />} exact />
+            <Route path='/' element={<Dashboard />} exact='true' />
             <Route path='/create' element={<Create />} />
             <Route path='/projects/:id' element={<Project />} />
             <Route path='/login' element={<Login />} />
