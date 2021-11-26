@@ -38,7 +38,6 @@ const Signup = () => {
 
     setThumbnailError(null);
     setThumbnail(selected);
-    console.log("Picture Updated");
   };
 
   return (
