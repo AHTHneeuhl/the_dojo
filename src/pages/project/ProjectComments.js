@@ -2,6 +2,7 @@ import { useState } from "react";
 import { timestamp } from "../../firebase/config";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import { useFirestore } from "../../hooks/useFirestore";
+import Avatar from "../../components/Avatar";
 
 const ProjectComments = ({ project }) => {
   const { updateDocument, response } = useFirestore("projects");
@@ -31,6 +32,22 @@ const ProjectComments = ({ project }) => {
   return (
     <div className='project-comment'>
       <h4>Project Comments</h4>
+      <ul>
+        {project.comments.length > 0 &&
+          project.comments.map((comment) => (
+            <li key={comment.id}>
+              <div className='comment-author'>
+                <Avatar user={comment} />
+              </div>
+              <div className='comment-date'>
+                <p>date here</p>
+              </div>
+              <div className='comment-content'>
+                <p>{comment.content}</p>
+              </div>
+            </li>
+          ))}
+      </ul>
       <form className='comments' onSubmit={handleSubmit}>
         <label>
           <span>Write Comment</span>
