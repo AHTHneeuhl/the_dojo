@@ -1,0 +1,33 @@
+.dashboard {
+  margin-bottom: 6rem;
+}
+
+.filter {
+  margin: 30px auto;
+}
+.filter nav {
+  display: flex;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+.filter p {
+  font-size: 0.9em;
+  margin-right: 10px;
+}
+.filter button {
+  background: transparent;
+  border: 0;
+  font-family: inherit;
+  font-weight: bold;
+  color: var(--text-color);
+  cursor: pointer;
+  border-right: 1px solid #e4e4e4;
+  font-size: 0.9em;
+}
+.filter button:last-child {
+  border: 0;
+}
+.filter button.active {
+  color: var(--primary-color);
+}
